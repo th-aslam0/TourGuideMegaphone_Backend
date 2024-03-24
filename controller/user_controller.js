@@ -28,6 +28,8 @@ async function signup(req, res) {
             const newUser = new User({
                 email: req.body.email,
                 password: req.body.password,
+                fname: req.body.fname,
+                lname: req.body.lname,       
             });
             const savedUser = await newUser.save();
             console.log(savedUser);
