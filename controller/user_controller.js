@@ -29,7 +29,8 @@ async function signup(req, res) {
                 email: req.body.email,
                 password: req.body.password,
                 fname: req.body.fname,
-                lname: req.body.lname,       
+                lname: req.body.lname,
+                role: req.body.role,
             });
             const savedUser = await newUser.save();
             console.log(savedUser);
