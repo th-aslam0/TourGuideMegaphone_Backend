@@ -45,6 +45,9 @@ app.put('/tours/:id', TourSessionController.putTour);
 // Delete a tour session by ID
 app.delete('/tours/:id', TourSessionController.removeTour);
 
+// Get a new tour session
+app.post('/tours_by_email', TourSessionController.getAllToursByEmail);
+
 
 app.listen(PORT, function () {
   console.log('server running on PORT', PORT);

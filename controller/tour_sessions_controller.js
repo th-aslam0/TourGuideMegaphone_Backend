@@ -20,6 +20,16 @@ async function getAllTours(req, res) {
   }
 }
 
+// Get all tour sessions
+async function getAllToursByEmail(req, res) {
+  try {
+    const tourSessions = await TourSession.find({tourGuideEmail: req.body.tourGuideEmail});
+    res.json(tourSessions);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+}
+
 // Get a single tour session by ID
 async function getTour(req, res) {
   try {
@@ -69,4 +79,5 @@ module.exports = {
   getTour,
   putTour,
   removeTour,
+  getAllToursByEmail
 };
