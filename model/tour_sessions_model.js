@@ -7,6 +7,7 @@ const Schema = mongoose.Schema({
   tourStartDateTime: String,
   tourDuration: Number,
   price: Number,
+  tourGuideEmail: String
 });
 const TourSession = mongoose.model('TourSession', Schema);
 module.exports = TourSession;
