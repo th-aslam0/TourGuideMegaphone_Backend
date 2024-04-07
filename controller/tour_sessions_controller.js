@@ -23,7 +23,8 @@ async function getAllTours(req, res) {
 // Get all tour sessions
 async function getAllToursByEmail(req, res) {
   try {
-    const tourSessions = await TourSession.find({tourGuideEmail: req.body.tourGuideEmail});
+    console.log(req.body);
+    const tourSessions = await TourSession.find({tourGuideEmail: req.body.email});
     res.json(tourSessions);
   } catch (err) {
     res.status(500).json({ error: err.message });
