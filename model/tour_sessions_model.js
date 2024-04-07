@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema({
-  country: String,
-  city: String,
+  tourCountry: String,
+  tourCity: String,
   tourTitle: String,
   tourDescription: String,
-  tourStartDateTime: String,
+  tourStartTime: String,
   tourDuration: Number,
-  price: Number,
+  tourPrice: Number,
   tourGuideEmail: String
 });
 const TourSession = mongoose.model('TourSession', Schema);
